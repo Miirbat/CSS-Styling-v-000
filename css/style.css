@@ -1,9 +1,66 @@
-@font-face {
-    font-family: "Outwrite";
-    src: url(Outwrite.ttf);
+@import url('https://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900');
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script');
+
+/* CSS syntax */
+
+/*
+selector {
+  property: value;
+}
+*/
+
+p {
+  font-size: 1em; /* 1em === 16px */
+  line-height: 1.5em;
 }
 
-h1, h2 {
-    font-family: "Outwrite";
-    font-color: red
+figcaption {
+  /*
+  font-weight: normal;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  font-family: Georgia, "New Times Roman", serif; */
+
+  font: normal 0.75em/1.5em "Elsie Swash Caps", cursive;
+  color: #777; /*#AACC77;   #AC7 */
+  text-align: right;
+}
+
+
+/* class selector - can have multiple classes applied to the same element */
+
+.milk-text {
+  font: bold 2.6em 'Elsie Swash Caps', cursive;
+  color: white;
+  text-shadow: 0 2px 3px #000; /* horizontal offset, vertical, blurr*/
+}
+
+/* ID selector can only be applied to one ID per page */
+#logo {
+  background: aqua;
+}
+
+/* descendant selector */
+#logo h1 {
+  font-family: 'Clicker Script', cursive;
+}
+
+#logo h2 {
+  font-family: 'Elsie Swash Caps', cursive;
+}
+
+/* Pseudo selector - selects element based on relationship to other element or event state
+i.e :link  state */
+#details a:link, #details a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#details a:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+#details a:active{
+  color: red;
 }
